@@ -11,7 +11,10 @@ lazy val root = (project in file("."))
     name := "kata",
     libraryDependencies ++= Seq(
       monocleCore,
-      minitest % Test
+      monocleMacros,
+      scalatest % Test,
+      scalacheck % Test,
+      scalacheckShapeless % Test
     ),
     testFrameworks += new TestFramework("minitest.runner.Framework"),
   )
